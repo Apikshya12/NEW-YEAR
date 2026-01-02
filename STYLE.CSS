@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  z-index: 10;
+}
+
+h1 {
+  font-size: 3.5em;
+  animation: glow 2s infinite alternate;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+#countdown {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  background: gold;
+  color: #333;
+}
+
+button:hover {
+  background: #ffd700;
+}
+
+.firework {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: explode 1.5s linear forwards;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px gold, 0 0 20px orange;
+  }
+  to {
+    text-shadow: 0 0 25px white, 0 0 50px gold;
+  }
+}
+
+@keyframes explode {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(25);
+    opacity: 0;
+  }
+}
